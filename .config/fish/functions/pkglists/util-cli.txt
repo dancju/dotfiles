@@ -1,0 +1,13 @@
+android-tools
+android-udev
+fish
+gvfs-google
+gvfs-mtp
+htop
+light
+p7zip
+pacman-contrib
+pacutils
+pandoc
+the_silver_searcher
+tor

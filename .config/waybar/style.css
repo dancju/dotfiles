@@ -1,0 +1,67 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "Source Code Pro", "Font Awesome 5 Free Solid", monospace;
+  font-size: 12px;
+  min-height: 2em;
+}
+
+window#waybar {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+}
+
+#workspaces button {
+  padding: 0 1em;
+  background-color: transparent;
+  border-top: 2px solid transparent;
+  color: #fff;
+}
+
+#workspaces button:hover {
+  background: transparent;
+  box-shadow: inherit;
+}
+
+#workspaces button.focused {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-bottom: 2px solid #fff;
+}
+
+#workspaces button.urgent {
+  background-color: rgba(255, 0, 0, 0.25);
+}
+
+#window,
+#tray,
+#network,
+#pulseaudio,
+#backlight,
+#cpu,
+#memory,
+#temperature,
+#battery,
+#clock {
+  padding: 0 1em;
+  color: #fff;
+}
+
+#battery.warning:not(.charging) {
+  background-color: rgba(255, 128, 0, 0.5);
+}
+
+#battery.critical:not(.charging) {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+#memory.warning {
+  background-color: rgba(255, 128, 0, 0.5);
+}
+
+#memory.critical {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+#temperature.critical {
+  background-color: rgba(255, 0, 0, 0.5);
+}

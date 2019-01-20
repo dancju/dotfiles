@@ -1,0 +1,107 @@
+{
+  "layer": "top",
+  "position": "top",
+  "modules-left": ["sway/workspaces", "sway/window"],
+  "modules-center": [],
+  "modules-right": [
+    "tray",
+    "network",
+    "pulseaudio",
+    "backlight",
+    "cpu",
+    "memory",
+    "temperature",
+    "battery",
+    "clock#la",
+    "clock#ny",
+    "clock#sh"
+  ],
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{name} {icon}",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "10": "",
+      "default": "",
+      "urgent": ""
+    }
+  },
+  "sway/window": { "tooltip": false },
+  "tray": { "spacing": 10 },
+  "network": {
+    "format-disconnected": " DOWN",
+    "format-ethernet": " {ipaddr}/{cidr}",
+    "format-wifi": " {essid} ({signalStrength}%)",
+    "format-alt": " {bandwidthDownOctets}  {bandwidthUpOctets}",
+    "tooltip": false
+  },
+  "pulseaudio": {
+    "scroll-step": 5,
+    "format": "{icon} {volume}%",
+    "format-bluetooth": " {icon} {volume}%",
+    "format-muted": " MUTED",
+    "format-icons": {
+      "headphones": "",
+      "handsfree": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol",
+    "tooltip": false
+  },
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": [""]
+  },
+  "cpu": {
+    "format": " {usage}%",
+    "tooltip": false
+  },
+  "memory": {
+    "format": " {}%",
+    "states": {
+        "warning": 80,
+        "critical": 90
+    },
+    "tooltip": false
+  },
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "{icon} {temperatureC}°C",
+    "format-icons": ["", "", ""]
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{icon} {time}",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "clock#la": {
+    "format": "{:%Z %d %a %H:%M}",
+    "tooltip-format": "{:%Y %h %d %T}",
+    "timezone": "America/Los_Angeles"
+  },
+  "clock#ny": {
+    "format": "{:%Z %d %a %H:%M}",
+    "tooltip-format": "{:%Y %h %d %T}",
+    "timezone": "America/New_York"
+  },
+  "clock#sh": {
+    "format": "{:%Z %d %a %H:%M}",
+    "tooltip-format": "{:%Y %h %d %T}",
+    "timezone": "Asia/Shanghai"
+  }
+}

@@ -1,0 +1,7 @@
+dictd
+fcitx-anthy
+fcitx-configtool
+fcitx-rime
+hunspell-en_GB
+mythes-en
+rime-emoji

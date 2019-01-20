@@ -1,0 +1,14 @@
+boost
+sagemath
+clang
+cmake
+docker-compose
+gdb
+go
+python-pipenv
+python-scikit-learn
+python-seaborn
+python-statsmodels
+ruby-bundler
+rustup
+yarn

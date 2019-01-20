@@ -1,0 +1,66 @@
+general {
+  interval = 1
+  color_good = '#88b090'
+  color_degraded = '#ccdc90'
+  color_bad = '#e89393'
+}
+
+order += "wireless _first_"
+order += "volume master"
+order += "cpu_usage"
+order += "memory"
+order += "cpu_temperature 0"
+order += "battery all"
+order += "tztime la"
+order += "tztime ny"
+order += "tztime sh"
+
+wireless _first_ {
+  format_up = " %essid%quality"
+  format_down = " down"
+}
+
+volume master {
+  format = " %volume"
+  format_muted = " (%volume)"
+}
+
+cpu_usage {
+  format = " %usage"
+}
+
+memory {
+  format = " %free"
+}
+
+cpu_temperature 0 {
+  format = " %degrees°C"
+}
+
+battery all {
+  format = "%status %percentage %remaining"
+  last_full_capacity = true
+  integer_battery_capacity = true
+  low_threshold = 15
+  threshold_type = percentage
+  hide_seconds = true
+  status_chr = ""
+  status_bat = ""
+  status_unk = ""
+  status_full = ""
+}
+
+tztime la {
+  format = "%Z %a %H:%M:%S"
+  timezone = "America/Los_Angeles"
+}
+
+tztime ny {
+  format = "%Z %a %H:%M:%S"
+  timezone = "America/New_York"
+}
+
+tztime sh {
+  format = "%Z %a %H:%M:%S"
+  timezone = "Asia/Shanghai"
+}
