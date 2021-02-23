@@ -1,7 +1,5 @@
 android-tools
-android-udev
 fish
-gvfs-google
 gvfs-mtp
 htop
 light
