@@ -38,7 +38,6 @@ assign [class ="^Signal$"] 5
 assign [class ="^Vmware$"] 10
 
 # autostart
-exec blueman-applet
 exec fcitx5
 exec kitty
 exec mako
@@ -47,16 +46,15 @@ exec swayidle  -w \
   timeout 600 'swaymsg "output * dpms off"' \
   resume 'swaymsg "output * dpms on"' \
   before-sleep 'swaylock -f -c 000000'
-
 for_window [app_id="^firefox$"] inhibit_idle fullscreen
 
 # key-bindings: basics
 floating_modifier $mod normal
 bindsym $mod+Shift+q kill
 bindsym $mod+Shift+c reload
+bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway and end your Wayland session?' -b 'Yes, exit sway' 'swaymsg exit'
 bindsym $mod+Return exec kitty
-bindsym $mod+space exec rofi -show drun
-bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+bindsym $mod+d exec rofi -show drun
 
 # key-bindings: switching focus
 bindsym $mod+$left focus left
@@ -70,32 +68,31 @@ bindsym $mod+Shift+$down move down
 bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
 
-# key-bindings: moving the focused workspace to output
+# key-bindings: moving the focused workspace
 bindsym $mod+Ctrl+$left move workspace to output left
 bindsym $mod+Ctrl+$down move workspace to output down
 bindsym $mod+Ctrl+$up move workspace to output up
 bindsym $mod+Ctrl+$right move workspace to output right
 
 # key-bindings: layout
-bindsym $mod+Shift+space floating toggle
-bindsym $mod+a focus parent
-bindsym $mod+f fullscreen
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 bindsym $mod+b splith
 bindsym $mod+v splitv
-
-# key-bindings: scratchpad
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
+bindsym $mod+f fullscreen
 
 # key-bindings: multimedia
-bindsym XF86AudioRaiseVolume  exec pactl set-sink-volume @DEFAULT_SINK@ +6553
-bindsym XF86AudioLowerVolume  exec pactl set-sink-volume @DEFAULT_SINK@ -6553
-bindsym XF86AudioMute         exec pactl set-sink-mute   @DEFAULT_SINK@ toggle
-bindsym XF86MonBrightnessDown exec light -U 10
-bindsym XF86MonBrightnessUp   exec light -A 10
+bindsym XF86AudioRaiseVolume  exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +6553
+bindsym XF86AudioLowerVolume  exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -6553
+bindsym XF86AudioMute         exec --no-startup-id pactl set-sink-mute   @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute      exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
+bindsym XF86MonBrightnessUp   exec --no-startup-id light -A 10
 
 # key-bindings: screen capture
 bindsym --release Print exec grim screenshot_$(date '+%Y%m%d_%H%M%S').png

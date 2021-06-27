@@ -1,25 +1,26 @@
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'kristijanhusak/vim-hybrid-material'
+Plug 'itchyny/lightline.vim'
+Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 autocmd FileType * set ts=2 | set sw=2 | set expandtab
 autocmd FileType make setlocal noexpandtab
-colorscheme hybrid_material
+colorscheme onehalfdark
 let g:NERDSpaceDelims = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'jsformatter'
-let g:airline_powerline_fonts = 1
-let g:airline_theme = 'term'
 let g:enable_bold_font = 1
 let g:enable_italic_font = 1
 let g:hybrid_transparent_background = 1
+let g:lightline = {
+  \ 'colorscheme': 'onehalfdark',
+  \ 'separator': { 'left': '', 'right': '' },
+  \ 'subseparator': { 'left': '', 'right': '' },
+\ }
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1

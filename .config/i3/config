@@ -1,0 +1,111 @@
+# variables
+set $mod Mod4
+set $left j
+set $down k
+set $up l
+set $right semicolon
+
+# output
+client.focused #007777 #007777 #ffffff #007777 #007777
+default_border pixel 1
+font pango:Source Code Pro 12
+gaps inner 8
+exec --no-startup-id feh --bg-scale ~/.local/share/backgrounds/mojave/day_5120x2280.jpg
+smart_borders on
+smart_gaps on
+
+# assignations
+assign [class="^kitty$"] 1
+assign [class="^code-oss$"] 2
+assign [class="^Org.gnome.Nautilus$"] 3
+assign [class="^firefox$"] 4
+assign [class="^tutanota-desktop$"] 5
+assign [class="^Signal$"] 5
+
+# autostart
+exec i3-sensible-terminal
+exec --no-startup-id fcitx5
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+# keybindings: basics
+floating_modifier $mod
+bindsym $mod+Shift+q kill
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3 and end the X session?' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun"
+
+# key-bindings: switching focus
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+
+# key-bindings: moving the focused window
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+
+# key-bindings: moving the focused workspace
+bindsym $mod+Ctrl+$left move workspace to output left
+bindsym $mod+Ctrl+$down move workspace to output down
+bindsym $mod+Ctrl+$up move workspace to output up
+bindsym $mod+Ctrl+$right move workspace to output right
+
+# key-bindings: layout
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+bindsym $mod+h split h
+bindsym $mod+v split v
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+#bindsym $mod+a focus parent
+#bindsym $mod+d focus child
+bindsym $mod+f fullscreen toggle
+
+# key-bindings: multimedia
+bindsym XF86AudioRaiseVolume  exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
+bindsym XF86AudioLowerVolume  exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
+bindsym XF86AudioMute         exec --no-startup-id pactl set-sink-mute   @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute      exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
+bindsym XF86MonBrightnessUp   exec --no-startup-id light -A 10
+
+# key-bindings: screen capture
+bindsym --release Print       exec screenshot.sh -e
+bindsym --release Shift+Print exec screenshot.sh -s
+
+# switch to workspace
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+6 workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace number 9
+bindsym $mod+0 workspace number 10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+Shift+9 move container to workspace number 9
+bindsym $mod+Shift+0 move container to workspace number 10
+
+bar {
+	position top
+	status_command i3status-rs
+	tray_output primary
+}

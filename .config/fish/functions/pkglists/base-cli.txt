@@ -2,6 +2,8 @@ autoconf
 automake
 base
 bison
+bluez
+bluez-utils
 fwupd
 intel-ucode
 linux-firmware
@@ -11,5 +13,6 @@ man-db
 man-pages
 networkmanager
 pkgconf
+pulseaudio-alsa
 sudo
 usbutils

@@ -7,5 +7,6 @@ p7zip
 pacman-contrib
 pacutils
 pandoc
+python-argcomplete
 the_silver_searcher
 tor

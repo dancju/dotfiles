@@ -1,8 +1,10 @@
 boost
 cmake
+dbeaver
 docker-compose
 lldb
 python-isort
+python-pandas-datareader
 python-pipenv
 python-pytorch-opt
 python-scikit-learn

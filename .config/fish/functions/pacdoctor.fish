@@ -2,7 +2,7 @@ set pkgs ()
 for list in $HOME/.config/fish/functions/pkglists/*
 	set --append pkgs (cat $list)
 end
-set pkgs (echo $pkgs | tr " " "\n" | sort)
+set pkgs (echo $pkgs | tr " " "\n" | grep . | sort)
 
 function check_dup
 	set duplicated (echo $pkgs | tr " " "\n" | uniq --repeated)

@@ -42,6 +42,7 @@ $endif$
 \DeclareMathOperator*\Cov{Cov}
 \DeclareMathOperator*\argmax{arg\,max}
 \DeclareMathOperator*\argmin{arg\,min}
+\DeclareMathOperator\sgn{sgn}
 \newtheorem{lemma}{Lemma}[section]
 \newtheorem{theorem}{Theorem}[section]
 
