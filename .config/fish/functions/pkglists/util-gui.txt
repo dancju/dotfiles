@@ -1,5 +1,3 @@
-adobe-source-han-sans-tw-fonts
-adobe-source-han-serif-tw-fonts
 baobab
 bleachbit
 eog
@@ -10,7 +8,7 @@ gnome-podcasts
 kitty
 mpv
 nautilus
+noto-fonts-cjk
 noto-fonts-emoji
 pavucontrol
 seahorse
-ttf-sarasa-gothic

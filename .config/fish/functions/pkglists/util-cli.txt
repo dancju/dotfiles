@@ -1,12 +1,9 @@
-android-tools
 fish
-gvfs-mtp
 htop
 light
 p7zip
 pacman-contrib
 pacutils
 pandoc
-python-argcomplete
 the_silver_searcher
 tor

@@ -16,7 +16,7 @@ smart_gaps on
 
 # assignations
 assign [class="^kitty$"] 1
-assign [class="^code-oss$"] 2
+assign [class="^Code$"] 2
 assign [class="^Org.gnome.Nautilus$"] 3
 assign [class="^firefox$"] 4
 assign [class="^tutanota-desktop$"] 5

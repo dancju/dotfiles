@@ -1,0 +1,50 @@
+{
+  "C_Cpp.clang_format_sortIncludes": true,
+  "C_Cpp.clang_format_style": "LLVM",
+  "C_Cpp.default.cStandard": "c17",
+  "C_Cpp.default.cppStandard": "c++20",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.fontFamily": "Source Code Pro",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 24,
+  "editor.formatOnSave": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.minimap.enabled": false,
+  "editor.rulers": [
+    80
+  ],
+  "editor.suggestSelection": "first",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "git.autofetch": true,
+  "github.copilot.enable": {
+    "*": true,
+  },
+  "javascript.format.semicolons": "insert",
+  "latex-workshop.chktex.enabled": true,
+  "latex-workshop.view.pdf.viewer": "tab",
+  "python.formatting.provider": "black",
+  "python.linting.flake8Enabled": true,
+  "typescript.format.insertSpaceAfterConstructor": true,
+  "typescript.format.semicolons": "insert",
+  "typescript.preferences.quoteStyle": "double",
+  "window.menuBarVisibility": "toggle",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[latex]": {
+    "editor.wordWrap": "on"
+  },
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+}

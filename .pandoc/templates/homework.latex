@@ -1,4 +1,4 @@
-\documentclass[letterpaper, 12pt]{scrartcl}
+\documentclass[letterpaper, 12pt]{article}
 
 \usepackage{algorithm}
 \usepackage{algorithmic}
@@ -7,14 +7,13 @@
 \usepackage{amsthm}
 \usepackage{bm}
 \usepackage{booktabs}
-\usepackage{cmbright}
+\usepackage{concmath}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{lastpage}
 \usepackage{listings}
 \usepackage{longtable}
 \usepackage{minted}
-\usepackage{natbib}
 \usepackage{scrlayer-scrpage}
 \usepackage{subcaption}
 \usepackage{xcolor}
@@ -22,11 +21,9 @@ $for(header-includes)$
 $header-includes$
 $endfor$
 
-\bibliographystyle{plainnat}
 \providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{-\maxdimen}
 \setminted{fontsize=\fontsize{9pt}{9.9pt}}
-\KOMAoptions{parskip=half}
 $highlighting-macros$
 
 \cofoot{\color{teal}\upshape Page \thepage~of~\pageref*{LastPage}}

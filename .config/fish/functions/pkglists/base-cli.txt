@@ -2,7 +2,6 @@ autoconf
 automake
 base
 bison
-bluez
 bluez-utils
 fwupd
 intel-ucode
@@ -14,5 +13,6 @@ man-pages
 networkmanager
 pkgconf
 pulseaudio-alsa
+pulseaudio-bluetooth
 sudo
 usbutils
