@@ -1,14 +1,12 @@
+alacritty
 baobab
 bleachbit
 eog
 evince
 file-roller
 gnome-disk-utility
-gnome-podcasts
-kitty
 mpv
 nautilus
 noto-fonts-cjk
 noto-fonts-emoji
-pavucontrol
 seahorse

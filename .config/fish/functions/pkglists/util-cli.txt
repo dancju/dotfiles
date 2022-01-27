@@ -1,3 +1,4 @@
+bluez-utils
 fish
 htop
 light
@@ -6,4 +7,3 @@ pacman-contrib
 pacutils
 pandoc
 the_silver_searcher
-tor

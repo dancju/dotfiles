@@ -1,6 +1,4 @@
-gimp
 inkscape
-libreoffice-still
 neovim
 texlive-fontsextra
 texlive-latexextra

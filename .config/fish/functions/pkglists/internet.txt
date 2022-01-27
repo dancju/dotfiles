@@ -1,4 +1,3 @@
 aria2
-firefox
-signal-desktop
+telegram-desktop
 youtube-dl

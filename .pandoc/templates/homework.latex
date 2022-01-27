@@ -7,7 +7,6 @@
 \usepackage{amsthm}
 \usepackage{bm}
 \usepackage{booktabs}
-\usepackage{concmath}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{lastpage}
@@ -32,8 +31,8 @@ $if(title)$
 \lohead{\color{teal}\scshape $title$}
 $endif$
 
-\newcommand\diff{\mathop{}\!\mathrm{d}}
-\newcommand\tran{^{\mkern-1.5mu\mathsf{T}}}
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newcommand*\tran{^{\mkern-1.5mu\mathsf{T}}}
 \DeclareMathOperator*\E{E}
 \DeclareMathOperator*\Var{Var}
 \DeclareMathOperator*\Cov{Cov}

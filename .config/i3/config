@@ -16,11 +16,10 @@ smart_gaps on
 
 # assignations
 assign [class="^kitty$"] 1
-assign [class="^Code$"] 2
-assign [class="^Org.gnome.Nautilus$"] 3
-assign [class="^firefox$"] 4
-assign [class="^tutanota-desktop$"] 5
-assign [class="^Signal$"] 5
+assign [class="^Code$"] 1
+assign [class="^Org.gnome.Nautilus$"] 2
+assign [class="^firefox$"] 3
+assign [class="^tutanota-desktop$"] 4
 
 # autostart
 exec i3-sensible-terminal
